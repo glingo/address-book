@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routing>
+    
+    <route name="addressbook.home" path="/">
+        <default key="_controller">person_controller:all</default>
+    </route>
+    
+    <route name="addressbook.persons" path="/persons">
+        <default key="_controller">person_controller:all</default>
+    </route>
+    
+    <route name="addressbook.persons.save" path="/persons/save">
+        <default key="_controller">person_controller:save</default>
+    </route>
+    
+    <route name="addressbook.persons.create" path="/persons/create">
+        <default key="_controller">person_controller:create</default>
+    </route>
+    
+</routing>

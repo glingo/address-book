@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <services>
+        <service id="person_repository" class="com.marvin.bundle.addressbook.repository.PersonRepository">
+        </service>
+        
+        <service id="person_manager" class="com.marvin.bundle.addressbook.business.PersonManager">
+            <argument type="service" ref="person_repository" />
+        </service>
+        
+        <service id="person_controller" class="com.marvin.bundle.addressbook.controller.PersonController">
+            <argument type="service" ref="person_manager" />
+        </service>
+        
+        
+        <!--views-->
+        <service id="persons" class="com.marvin.bundle.addressbook.resources.view.swing.Home">
+            <argument type="service" ref="action_handler" />
+        </service>
+        
+        <!--views-->
+        <service id="person" class="com.marvin.bundle.addressbook.resources.view.swing.person.Create">
+            <argument type="service" ref="action_handler" />
+        </service>
+    </services>
+</container>
